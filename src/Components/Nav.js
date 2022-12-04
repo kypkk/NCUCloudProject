@@ -71,7 +71,7 @@ export default function Example() {
           variant="small"
           className="mr-4 cursor-pointer py-1.5 font-normal"
         >
-          <span className=" font-bold text-lg">Cloud Computing Group2</span>
+          <span className=" font-bold text-lg">Cloud Computing BIKADEI</span>
         </Typography>
         <div className="hidden lg:block">{navList}</div>
         <Button
@@ -122,7 +122,7 @@ export default function Example() {
       <MobileNav open={openNav}>
         {navList}
         <Button variant="gradient" size="sm" fullWidth className="mb-2">
-          <span>Buy Now</span>
+          <span>What's up</span>
         </Button>
       </MobileNav>
     </Navbar>
