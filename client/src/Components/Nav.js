@@ -71,7 +71,7 @@ export default function Example() {
           variant="small"
           className="mr-4 cursor-pointer py-1.5 font-normal"
         >
-          <span className=" font-bold text-lg">Cloud Computing BIKADEI</span>
+          <span className=" font-bold text-lg">Cloud Computing BEKADEI</span>
         </Typography>
         <div className="hidden lg:block">{navList}</div>
         <Button
