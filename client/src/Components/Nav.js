@@ -35,8 +35,8 @@ export default function Example() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/genqr" className="flex items-center">
-          GenerateQrcode
+        <a href="/custom" className="flex items-center">
+          CustomURL
         </a>
       </Typography>
       <Typography
@@ -45,8 +45,8 @@ export default function Example() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
-          Blocks
+        <a href="/genqr" className="flex items-center">
+          GenerateQrcode
         </a>
       </Typography>
       <Typography

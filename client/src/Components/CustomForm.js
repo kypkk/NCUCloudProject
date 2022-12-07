@@ -1,6 +1,6 @@
 import React from "react";
 
-const Shortenform = ({ url }) => {
+const Customform = ({ url }) => {
   return (
     <div className="m-3 flex justify-center align-center">
       <form>
@@ -22,4 +22,4 @@ const Shortenform = ({ url }) => {
   );
 };
 
-export default Shortenform;
+export default Customform;
