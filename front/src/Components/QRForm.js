@@ -17,7 +17,7 @@ const QRform = ({ url }) => {
   };
 
   return (
-    <div className="w-full m-3 flex justify-center align-center flex-col">
+    <div className=" m-3 flex justify-center align-center flex-col">
       <form className="w-full flex justify-center align-center">
         <input
           type="text"
