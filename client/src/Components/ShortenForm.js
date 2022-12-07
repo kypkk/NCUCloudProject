@@ -2,7 +2,7 @@ import React, { FormEvent, useRef, useState } from "react";
 
 const Shortenform = ({ url }) => {
   return (
-    <div className="w-full m-3 flex justify-center align-center">
+    <div className="m-3 flex justify-center align-center">
       <form>
         <input
           type="text"
