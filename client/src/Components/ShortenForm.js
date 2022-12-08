@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import axios from "axios";
 
 const Shortenform = ({ url, seturl }) => {
+  const inputRef = useRef();
+
   const shortenbutton = (e) => {
-    e.preventDefault();
+    e.preventDefault("");
     axios
       .post("http://localhost:8080/shorten", {
-        URL: "https://www.google.com",
+        URL: inputRef.current.value.toString(),
       })
       .then((response) => {
-        seturl(response.data.URL);
-        console.log(url);
+        seturl("Bekaidei" + response.data.URL);
       });
+    inputRef.current.value = "";
   };
 
   return (
@@ -23,6 +25,7 @@ const Shortenform = ({ url, seturl }) => {
           id=""
           placeholder="Type in a url😁"
           className="py-2 w-96 p-2 border-collapse border border-blue-300 rounded-xl text-black m-4"
+          ref={inputRef}
         />
         <button
           onClick={shortenbutton}
@@ -32,7 +35,10 @@ const Shortenform = ({ url, seturl }) => {
           Submit
         </button>
       </form>
-      <h3 className="flex pl-40 justify-start align-center">fdfdsf</h3>
+      <div className="flex justify-center align-center">
+        <h3 className="w-96 mx-5">{url}</h3>
+        <h1 className="w-12 mx-5"></h1>
+      </div>
     </div>
   );
 };
