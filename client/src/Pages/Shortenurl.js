@@ -1,10 +1,10 @@
 import React from "react";
 import Form from "../Components/ShortenForm.js";
 
-const Shortenurl = ({ url }) => {
+const Shortenurl = ({ url, seturl }) => {
   return (
     <div>
-      <Form url={url} />
+      <Form url={url} seturl={seturl} />
     </div>
   );
 };
