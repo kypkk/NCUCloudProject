@@ -11,7 +11,7 @@ const Shortenform = ({ url, seturl }) => {
         URL: inputRef.current.value.toString(),
       })
       .then((response) => {
-        seturl("Bekaidei" + response.data.URL);
+        seturl(response.data.URL);
       });
     inputRef.current.value = "";
   };
