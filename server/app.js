@@ -3,6 +3,9 @@ import createRandom from "./createRandom.js";
 import bodyParser from "body-parser";
 import mysql from "mysql2";
 import cors from "cors";
+import dotenv from "dotenv";
+
+dotenv.config();
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -11,11 +14,11 @@ app.use(cors());
 
 //db parameters
 const db_option = {
-  host: "127.0.0.1",
-  user: "root",
-  password: "kypss50102",
-  database: "urlshortener",
-  port: "3306",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE,
+  port: process.env.DB_PORT,
 };
 
 //connection
@@ -92,6 +95,6 @@ app.post("/shorten", async (req, res) => {
   }
 });
 
-app.listen("8080", () => {
+app.listen(process.env.SERVER_PORT, () => {
   console.log("Server listening on port 8080");
 });
