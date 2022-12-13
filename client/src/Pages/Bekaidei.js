@@ -3,7 +3,6 @@ import axios from "axios";
 
 const Bekaidei = () => {
   let str = window.location.pathname;
-  str = str.replace("/Bekaidei", "");
   str = "http://localhost:8080" + str;
   useEffect(() => {
     axios.post(str).then((response) => {
