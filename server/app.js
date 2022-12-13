@@ -1,6 +1,7 @@
 import express from "express";
 import createRandom from "./createRandom.js";
 import bodyParser from "body-parser";
+import mysql2 from "mysql2";
 import cors from "cors";
 const app = express();
 
@@ -8,6 +9,28 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
+// redirect the shorten url
+app.post("/reurl/*", async (req, res) => {
+  try {
+    connection.query(
+      'SELECT * FROM urls where shortenUrl = "' + req.originalUrl + '"',
+      (err, rows) => {
+        console.log(
+          `redirecting the shortenUrl ${rows[0].shortenUrl} to ${rows[0].url}`
+        );
+        res.send({ URL: rows[0].url });
+        console.log("redirect success");
+        console.log(
+          "---------------------------------------------------------------------------------"
+        );
+      }
+    );
+  } catch (e) {
+    console.log(e);
+  }
+});
+
+// get the required shorten url and sqve it into the database
 app.post("/shorten", async (req, res) => {
   let { URL } = req.body;
   let rand = createRandom();
