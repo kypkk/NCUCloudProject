@@ -1,7 +1,7 @@
 import express from "express";
 import createRandom from "./createRandom.js";
 import bodyParser from "body-parser";
-import mysql2 from "mysql2";
+import mysql from "mysql2";
 import cors from "cors";
 const app = express();
 
@@ -9,8 +9,20 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
+//db parameters
+const db_option = {
+  host: "127.0.0.1",
+  user: "root",
+  password: "kypss50102",
+  database: "urlshortener",
+  port: "3306",
+};
+
+//connection
+const connection = mysql.createConnection(db_option);
+
 // redirect the shorten url
-app.post("/reurl/*", async (req, res) => {
+app.post("/Bekaidei/*", async (req, res) => {
   try {
     connection.query(
       'SELECT * FROM urls where shortenUrl = "' + req.originalUrl + '"',
@@ -34,7 +46,7 @@ app.post("/reurl/*", async (req, res) => {
 app.post("/shorten", async (req, res) => {
   let { URL } = req.body;
   let rand = createRandom();
-  let reurl = "/reurl/" + rand;
+  let reurl = "/Bekaidei/" + rand;
 
   try {
     connection.query(
@@ -61,7 +73,7 @@ app.post("/shorten", async (req, res) => {
             "---------------------------------------------------------------------------------"
           );
 
-          res.send({ URL: rows[0].shortenUrl });
+          res.send({ URL: reurl });
         } else {
           console.log("the Url is already in the database");
           console.log(
