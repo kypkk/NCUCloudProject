@@ -11,7 +11,7 @@ const Shortenform = ({ url, seturl }) => {
         URL: inputRef.current.value.toString(),
       })
       .then((response) => {
-        seturl(response.data.URL);
+        seturl("http://localhost:3000" + response.data.URL);
       });
     inputRef.current.value = "";
   };
