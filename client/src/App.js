@@ -23,7 +23,7 @@ function App() {
         />
         <Route path="/custom" element={<Custom />} url={url} />
         <Route path="/genqr" element={<GenerateQrcode />} url={url} />
-        <Route path="/Bekaidei/*" element={<Bekaidei />} />
+        <Route path="/BKD/*" element={<Bekaidei />} />
       </Routes>
       <Footer />
     </div>
