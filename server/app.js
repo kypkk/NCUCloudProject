@@ -25,7 +25,7 @@ const db_option = {
 const connection = mysql.createConnection(db_option);
 
 // redirect the shorten url
-app.post("/Bekaidei/*", async (req, res) => {
+app.post("/BKD/*", async (req, res) => {
   try {
     connection.query(
       'SELECT * FROM urls where shortenUrl = "' + req.originalUrl + '"',
@@ -49,7 +49,7 @@ app.post("/Bekaidei/*", async (req, res) => {
 app.post("/shorten", async (req, res) => {
   let { URL } = req.body;
   let rand = createRandom();
-  let reurl = "/Bekaidei/" + rand;
+  let reurl = "/BKD/" + rand;
 
   try {
     connection.query(
