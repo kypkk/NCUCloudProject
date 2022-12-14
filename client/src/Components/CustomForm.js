@@ -2,8 +2,8 @@ import React from "react";
 
 const Customform = ({ url }) => {
   return (
-    <div className="m-3 flex justify-center align-center">
-      <form>
+    <div className="m-3 flex justify-center align-center flex-col">
+      <form className="flex justify-center align-center">
         <input
           type="text"
           name=""
