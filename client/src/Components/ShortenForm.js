@@ -30,9 +30,9 @@ const Shortenform = ({ url, seturl }) => {
         <button
           onClick={shortenbutton}
           type="submit"
-          className="m-4 px-4 py-2 font-bold bg-blue-500 rounded-xl text-white w-24"
+          className="m-4 px-4 py-2 font-bold bg-blue-500 rounded-xl text-white w-30"
         >
-          Submit
+          一鍵縮短
         </button>
       </form>
       <div className="flex justify-center align-center">

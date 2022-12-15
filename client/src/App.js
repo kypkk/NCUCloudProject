@@ -5,6 +5,7 @@ import Footer from "./Components/Footer.js";
 import Shortenurl from "./Pages/Shortenurl";
 import Custom from "./Pages/Custom";
 import GenerateQrcode from "./Pages/GenerateQrcode";
+import About from "./Pages/About";
 import Bekaidei from "./Pages/Bekaidei";
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
@@ -22,7 +23,8 @@ function App() {
           element={<Shortenurl url={url} seturl={seturl} />}
         />
         <Route path="/custom" element={<Custom url={url} seturl={seturl} />} />
-        <Route path="/genqr" element={<GenerateQrcode />} url={url} />
+        <Route path="/genqr" element={<GenerateQrcode />} />
+        <Route path="/about" element={<About />} />
         <Route path="/BKD/*" element={<Bekaidei />} />
       </Routes>
       <Footer />

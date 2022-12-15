@@ -1,91 +1,46 @@
 import React from "react";
+import mainimage from "../Images/short.png";
 import "../Styles/Home.css";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import CallIcon from "@mui/icons-material/Call";
-import Image1 from "../Images/蘇韋中.jpg";
-import Image2 from "../Images/彭康彧.jpg";
-import Image3 from "../Images/洪聖凱.jpg";
-import Image4 from "../Images/張凱晴.jpg";
 
 const Home = () => {
   return (
-    <div id="model3" className="mt-auto">
-      <div className=""></div>
-      <div className="members flex align-center justify-center flex-col lg:flex-row">
-        <section className="flex align-center justify-center flex-col md:flex-row ">
-          <div className="member my-5 mx-12 md:m-5">
-            <img width={200} height={200} src={Image1} className="my-4" />
-            <div className="description">
-              <h1 className=" text-3xl my-4">蘇韋中</h1>
-              <h2 className=" text-lg my-4">組長</h2>
-              <p className=" my-4">
-                Consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                tincidunt ut laoreet dolore magna aliquam erat. Lorem ipsum
-                dolor sit amet consectet.
-              </p>
-              <div className="social-media">
-                <InstagramIcon />
-                <FacebookIcon />
-                <CallIcon />
-              </div>
-            </div>
-          </div>
-          <div className="member my-5 mx-12 md:m-5">
-            <img width={200} height={200} src={Image2} className="my-4" />
-            <div className="description">
-              <h1 className=" text-3xl my-4">彭康彧</h1>
-              <h2 className=" text-lg my-4">組員</h2>
-              <p className=" my-4">
-                Consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                tincidunt ut laoreet dolore magna aliquam erat. Lorem ipsum
-                dolor sit amet consectet.
-              </p>
-              <div className="social-media">
-                <InstagramIcon />
-                <FacebookIcon />
-                <CallIcon />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="flex align-center justify-center flex-col lg:flex-row">
-          <div className="member my-5 mx-12 md:m-5">
-            <img width={200} height={200} src={Image3} className="my-4" />
-            <div className="description">
-              <h1 className=" text-3xl my-4">洪聖凱</h1>
-              <h2 className=" text-lg my-4">組員</h2>
-              <p className=" my-4">
-                Consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                tincidunt ut laoreet dolore magna aliquam erat. Lorem ipsum
-                dolor sit amet consectet.
-              </p>
-              <div className="social-media">
-                <InstagramIcon />
-                <FacebookIcon />
-                <CallIcon />
-              </div>
-            </div>
-          </div>
-          <div className="member my-5 mx-12 md:m-5">
-            <img width={200} height={200} src={Image4} className="my-4" />
-            <div className="description">
-              <h1 className=" text-3xl my-4">張凱晴</h1>
-              <h2 className=" text-lg my-4">組員</h2>
-              <p className=" my-4">
-                Consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                tincidunt ut laoreet dolore magna aliquam erat. Lorem ipsum
-                dolor sit amet consectet.
-              </p>
-              <div className="social-media">
-                <InstagramIcon />
-                <FacebookIcon />
-                <CallIcon />
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+    <div className="flex align-center justify-start  m-4">
+      <section className="lg:mx-24 mx-5">
+        <div className=" my-10  md:invisible md:w-0">
+          <img src={mainimage} />
+        </div>
+        <h1 className=" text-5xl md:mt-72 text-blue-500 mb-4 font-bold">
+          BEKADEI
+        </h1>
+        <p className=" ">
+          希望我們的服務
+          <span className="text-blue-500 font-extrabold text-xl">
+            「BekaDei 變更短」
+          </span>
+        </p>
+        <p className="">
+          能夠幫助到需要縮短網址、生成QRCode的您，使您的工作時間與品質變更短、變更好
+        </p>
+        <div className="mt-2">
+          <button
+            type="submit"
+            className="my-4 mr-4 px-4 py-2 font-bold bg-blue-500 rounded-lg text-white w-30 h-10"
+          >
+            <a href="/shorten">縮短網址</a>
+          </button>
+          <button
+            type="submit"
+            className="my-4 mr-4 px-4 py-2 font-bold bg-blue-500 rounded-lg text-white w-30 h-10"
+          >
+            <a href="/genqr">QrCode</a>
+          </button>
+        </div>
+      </section>
+      <section>
+        <div className=" w-0 mt-48 invisible lg:visible lg:w-96">
+          <img src={mainimage} />
+        </div>
+      </section>
     </div>
   );
 };

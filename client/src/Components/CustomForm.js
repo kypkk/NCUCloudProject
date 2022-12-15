@@ -42,10 +42,10 @@ const Customform = ({ url, seturl }) => {
 
           <button
             type="submit"
-            className="m-4 px-4 py-2 font-bold bg-blue-500 rounded-xl text-white w-24 h-10"
+            className="m-4 px-4 py-2 font-bold bg-blue-500 rounded-xl text-white w-28 h-10"
             onClick={CustomButton}
           >
-            Submit
+            產生網址
           </button>
         </div>
       </form>

@@ -29,10 +29,10 @@ const QRform = ({ url }) => {
         />
         <button
           type="submit"
-          className="m-4 px-4 py-2 font-bold bg-blue-500 rounded-xl text-white"
+          className="m-4 px-4 py-2 font-bold bg-blue-500 rounded-xl text-white w-30"
           onClick={handleGenQR}
         >
-          Generate
+          一鍵生成
         </button>
       </form>
       {qrcode && (
@@ -46,7 +46,7 @@ const QRform = ({ url }) => {
               download="download.png"
               className="bg-blue-500 px-4 py-2 my-4 text-white rounded-xl"
             >
-              Download
+              下載
             </a>
           </div>
         </div>

@@ -25,8 +25,11 @@ export default function Example() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/shorten" className="flex items-center">
-          Shortenurl
+        <a
+          href="/shorten"
+          className="flex items-center text-base hover:text-blue-700 hover:underline mx-2"
+        >
+          縮短網址
         </a>
       </Typography>
       <Typography
@@ -35,8 +38,24 @@ export default function Example() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/custom" className="flex items-center">
-          CustomURL
+        <a
+          href="/custom"
+          className="flex items-center text-base hover:text-blue-700 hover:underline mx-2"
+        >
+          關鍵字網址生成
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal "
+      >
+        <a
+          href="/genqr"
+          className="flex items-center text-base hover:text-blue-700 hover:underline mx-2"
+        >
+          生成Qrcode
         </a>
       </Typography>
       <Typography
@@ -45,18 +64,11 @@ export default function Example() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/genqr" className="flex items-center">
-          GenerateQrcode
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Docs
+        <a
+          href="/about"
+          className="flex items-center text-base hover:text-blue-700 hover:underline mx-2"
+        >
+          關於我們
         </a>
       </Typography>
     </ul>
@@ -71,7 +83,7 @@ export default function Example() {
           variant="small"
           className="mr-4 cursor-pointer py-1.5 font-normal"
         >
-          <span className=" font-bold text-lg">Cloud Computing BEKADEI</span>
+          <span className=" font-bold text-xl text-blue-500">BEKADEI</span>
         </Typography>
         <div className="hidden lg:block">{navList}</div>
         <a href="/">
