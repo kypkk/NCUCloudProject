@@ -80,6 +80,7 @@ export default function Example() {
           className="hidden lg:inline-block "
         >
           <span>What's up</span>
+          <a href="/"></a>
         </Button>
         <IconButton
           variant="text"
@@ -123,6 +124,7 @@ export default function Example() {
         {navList}
         <Button variant="gradient" size="sm" fullWidth className="mb-2">
           <span>What's up</span>
+          <a href="/"></a>
         </Button>
       </MobileNav>
     </Navbar>
