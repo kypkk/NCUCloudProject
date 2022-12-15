@@ -7,11 +7,11 @@ const Shortenform = ({ url, seturl }) => {
   const shortenbutton = async (e) => {
     e.preventDefault("");
     await axios
-      .post("http://localhost:8080/shorten", {
+      .post(process.env.REACT_APP_SERVER + "/shorten", {
         URL: inputRef.current.value.toString(),
       })
       .then((response) => {
-        seturl("http://localhost:3000" + response.data.URL);
+        seturl(process.env.REACT_APP_CLIENT + response.data.URL);
       });
     inputRef.current.value = "";
   };

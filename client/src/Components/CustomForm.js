@@ -8,12 +8,12 @@ const Customform = ({ url, seturl }) => {
   const CustomButton = async (e) => {
     e.preventDefault("");
     await axios
-      .post("http://localhost:8080/custom", {
+      .post(process.env.REACT_APP_SERVER + "/custom", {
         URL: urlRef.current.value.toString(),
         Keyword: keywordRef.current.value.toString(),
       })
       .then((response) => {
-        seturl("http://localhost:3000" + response.data.URL);
+        seturl(process.env.REACT_APP_CLIENT + response.data.URL);
       });
     urlRef.current.value = "";
     keywordRef.current.value = "";
