@@ -21,7 +21,7 @@ function App() {
           path="/shorten"
           element={<Shortenurl url={url} seturl={seturl} />}
         />
-        <Route path="/custom" element={<Custom />} url={url} />
+        <Route path="/custom" element={<Custom url={url} seturl={seturl} />} />
         <Route path="/genqr" element={<GenerateQrcode />} url={url} />
         <Route path="/BKD/*" element={<Bekaidei />} />
       </Routes>
