@@ -4,9 +4,9 @@ import axios from "axios";
 const Shortenform = ({ url, seturl }) => {
   const inputRef = useRef();
 
-  const shortenbutton = (e) => {
+  const shortenbutton = async (e) => {
     e.preventDefault("");
-    axios
+    await axios
       .post("http://localhost:8080/shorten", {
         URL: inputRef.current.value.toString(),
       })
@@ -24,13 +24,13 @@ const Shortenform = ({ url, seturl }) => {
           name=""
           id=""
           placeholder="Type in a url😁"
-          className="py-2 w-96 p-2 border-collapse border border-blue-300 rounded-xl text-black m-4"
+          className="py-2 w-72 p-2 border-collapse border border-blue-300 rounded-xl text-black m-4"
           ref={inputRef}
         />
         <button
           onClick={shortenbutton}
           type="submit"
-          className="m-4 px-4 py-2 font-bold bg-blue-500 rounded-xl text-white"
+          className="m-4 px-4 py-2 font-bold bg-blue-500 rounded-xl text-white w-24"
         >
           Submit
         </button>
