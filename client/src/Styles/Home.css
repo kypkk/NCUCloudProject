@@ -97,7 +97,7 @@
 
 #model3 .description .social-media svg:hover {
   transform: scale(1.1);
-  color: #f21b3f;
+  color: rgb(1, 158, 255);
 }
 
 #model3 .member:hover::before {
