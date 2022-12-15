@@ -95,6 +95,55 @@ app.post("/shorten", async (req, res) => {
   }
 });
 
+// get the required shorten url and the key word then save it into the database
+app.post("/custom", async (req, res) => {
+  let { URL, Keyword } = req.body;
+  let reurl = "/BKD/" + Keyword;
+
+  try {
+    connection.query(
+      'SELECT * FROM urls where shortenUrl = "' + reurl + '"',
+      (err, rows) => {
+        if (rows[0] == null) {
+          console.log(
+            "Trying to insert the Url: " +
+              URL +
+              " with the shorten Url: " +
+              reurl +
+              " into the database."
+          );
+
+          connection.query("insert into urls set?", {
+            url: URL,
+            shortenUrl: reurl,
+          });
+
+          console.log(
+            "insert success. the shorten Url of Url: " + URL + " is" + reurl
+          );
+          console.log(
+            "---------------------------------------------------------------------------------"
+          );
+
+          res.send({ URL: reurl });
+        } else {
+          console.log("the Url is already in the database");
+          console.log(
+            "the shortened url is localhost:3000" + rows[0].shortenUrl
+          );
+          console.log(
+            "---------------------------------------------------------------------------------"
+          );
+
+          res.send({ URL: rows[0].shortenUrl });
+        }
+      }
+    );
+  } catch (e) {
+    console.log(e);
+  }
+});
+
 app.listen(process.env.SERVER_PORT, () => {
   console.log("Server listening on port " + process.env.SERVER_PORT);
 });
