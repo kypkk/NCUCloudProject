@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 import mysql from "mysql2";
 import cors from "cors";
 import dotenv from "dotenv";
+import e from "express";
 
 dotenv.config();
 const app = express();
@@ -127,15 +128,20 @@ app.post("/custom", async (req, res) => {
 
           res.send({ URL: reurl });
         } else {
-          console.log("the Url is already in the database");
-          console.log(
-            "the shortened url is localhost:3000" + rows[0].shortenUrl
-          );
-          console.log(
-            "---------------------------------------------------------------------------------"
-          );
+          if (rows[0].url == URL && rows[0].shortenUrl == reurl) {
+            console.log("the Url is already in the database");
+            console.log(
+              "the shortened url is localhost:3000" + rows[0].shortenUrl
+            );
+            console.log(
+              "---------------------------------------------------------------------------------"
+            );
 
-          res.send({ URL: rows[0].shortenUrl });
+            res.send({ URL: rows[0].shortenUrl });
+          } else {
+            console.log("ERR: same keyword with different url");
+            res.send({ URL: "這個關鍵字已經被用過了，請換一個關鍵字" });
+          }
         }
       }
     );
