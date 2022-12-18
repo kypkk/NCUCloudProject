@@ -13,7 +13,7 @@ const Customform = ({ url, seturl }) => {
         Keyword: keywordRef.current.value.toString(),
       })
       .then((response) => {
-        if (response.URL == "") {
+        if (response.data.ERR == "這個關鍵字已經被用過了，請換一個關鍵字") {
           seturl(response.data.ERR);
         } else {
           seturl(process.env.REACT_APP_CLIENT + response.data.URL);
