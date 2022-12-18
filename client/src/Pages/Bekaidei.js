@@ -4,11 +4,11 @@ import axios from "axios";
 const Bekaidei = () => {
   let str = window.location.pathname;
   str = process.env.REACT_APP_SERVER + str;
-  // useEffect(() => {
-  //   axios.post(str).then((response) => {
-  //     window.location.replace(response.data.URL);
-  //   });
-  // }, []);
+  useEffect(() => {
+    axios.post(str).then((response) => {
+      window.location.replace(response.data.URL);
+    });
+  }, []);
 
   return (
     <div className="flex justify-center align-center">
