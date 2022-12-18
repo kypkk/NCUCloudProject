@@ -13,7 +13,11 @@ const Customform = ({ url, seturl }) => {
         Keyword: keywordRef.current.value.toString(),
       })
       .then((response) => {
-        seturl(process.env.REACT_APP_CLIENT + response.data.URL);
+        if (response.URL == "") {
+          seturl(response.data.ERR);
+        } else {
+          seturl(process.env.REACT_APP_CLIENT + response.data.URL);
+        }
       });
     urlRef.current.value = "";
     keywordRef.current.value = "";
