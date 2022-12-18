@@ -140,7 +140,7 @@ app.post("/custom", async (req, res) => {
             res.send({ URL: rows[0].shortenUrl });
           } else {
             console.log("ERR: same keyword with different url");
-            res.send({ URL: "", ERR: "這個關鍵字已經被用過了，請換一個關鍵字" });
+            res.send({ URL: "", ERR: "這個關鍵字已被使用，請換一個關鍵字" });
           }
         }
       }
