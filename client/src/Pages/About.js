@@ -19,11 +19,10 @@ const About = () => {
             <div className="description">
               <h1 className=" text-3xl my-4">蘇韋中</h1>
               <h2 className=" text-lg my-4">組長</h2>
-              <p className=" my-4">
-                Consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                tincidunt ut laoreet dolore magna aliquam erat. Lorem ipsum
-                dolor sit amet consectet.
-              </p>
+              <p>蘇韋中 aka 威廉</p>
+              <p>來自國立中央大學數學系</p>
+              <p>個性剛毅木訥</p>
+              <p className=" mb-4 ">不苟言笑且熱愛大自然</p>
               <div className="social-media">
                 <InstagramIcon />
                 <FacebookIcon />
@@ -36,11 +35,10 @@ const About = () => {
             <div className="description">
               <h1 className=" text-3xl my-4">彭康彧</h1>
               <h2 className=" text-lg my-4">組員</h2>
-              <p className=" my-4">
-                Consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                tincidunt ut laoreet dolore magna aliquam erat. Lorem ipsum
-                dolor sit amet consectet.
-              </p>
+              <p>彭康彧 aka 康康</p>
+              <p>中央大學數學系 ➡️ 資工系</p>
+              <p>霍華德 Like 👍🏿</p>
+              <p className=" mb-4 ">雲端ㄌㄢ波萬☝🏼</p>
               <div className="social-media">
                 <InstagramIcon />
                 <FacebookIcon />
@@ -55,11 +53,10 @@ const About = () => {
             <div className="description">
               <h1 className=" text-3xl my-4">洪聖凱</h1>
               <h2 className=" text-lg my-4">組員</h2>
-              <p className=" my-4">
-                Consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                tincidunt ut laoreet dolore magna aliquam erat. Lorem ipsum
-                dolor sit amet consectet.
-              </p>
+              <p>洪聖凱 aka 盛開</p>
+              <p>中央大學通訊系</p>
+              <p>公路車摔車一直沒修🥲</p>
+              <p className=" mb-4 ">變把現在跟霍金聯名XD</p>
               <div className="social-media">
                 <InstagramIcon />
                 <FacebookIcon />
@@ -72,11 +69,10 @@ const About = () => {
             <div className="description">
               <h1 className=" text-3xl my-4">張凱晴</h1>
               <h2 className=" text-lg my-4">組員</h2>
-              <p className=" my-4">
-                Consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                tincidunt ut laoreet dolore magna aliquam erat. Lorem ipsum
-                dolor sit amet consectet.
-              </p>
+              <p>張凱晴</p>
+              <p>中央大學機械系 ➡️ 資工系</p>
+              <p>人生一半的時間在睡覺</p>
+              <p className=" mb-4 ">但還是睡不飽🥱</p>
               <div className="social-media">
                 <InstagramIcon />
                 <FacebookIcon />

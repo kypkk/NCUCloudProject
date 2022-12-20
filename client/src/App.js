@@ -14,7 +14,7 @@ function App() {
   const [url, seturl] = useState("");
 
   return (
-    <div className="App flex flex-col min-h-screen">
+    <div className="App flex flex-col min-h-screen bg-gradient-to-b from-blue-100 to-white">
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />

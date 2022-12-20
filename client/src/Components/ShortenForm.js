@@ -30,13 +30,13 @@ const Shortenform = ({ url, seturl }) => {
         <button
           onClick={shortenbutton}
           type="submit"
-          className="m-4 px-4 py-2 font-bold bg-blue-500 rounded-xl text-white w-30"
+          className="m-4 px-4 py-2 font-bold bg-blue-500 rounded-xl text-white lg:w-28 sm:w-20"
         >
           一鍵縮短
         </button>
       </form>
       <div className="flex justify-center align-center">
-        <h3 className=" w-48 mx-5">{url}</h3>
+        <h3 className=" w-72 mx-5">{url}</h3>
         <h1 className="w-12 mx-5"></h1>
       </div>
     </div>
