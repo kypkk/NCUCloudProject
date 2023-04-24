@@ -5,7 +5,7 @@ import "../Styles/Home.css";
 const Home = () => {
   return (
     <div className="flex align-center justify-start  m-4">
-      <section className="lg:mx-24 mx-5">
+      <section className="lg:mx-24 mx-5 ">
         <div className=" my-10  md:invisible md:w-0">
           <img src={mainimage} />
         </div>

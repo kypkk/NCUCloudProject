@@ -6,7 +6,7 @@ const Bekaidei = () => {
   str = process.env.REACT_APP_SERVER + str;
   useEffect(() => {
     axios.post(str).then((response) => {
-      window.location.replace(response.data.URL);
+      window.location.replace(response.data.URL); /* this redirects the shortenurl */
     });
   }, []);
 
