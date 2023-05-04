@@ -21,13 +21,13 @@ jobs:
     name: "Build&Test: node-${{ matrix.node_version }}"
     steps:
       - uses: actions/checkout@v3
+      - name: cd into client folder
+        run: cd ./client
       - name: Set node version to ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - name: cd into client folder
-        run: cd ./client
       - name: Install deps
         run: npm install
       - name: Build
