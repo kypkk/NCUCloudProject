@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "../Components/ShortenForm.js";
+import Form from "../Components/ShortenForm.jsx";
 
 const Shortenurl = ({ url, seturl }) => {
   return (

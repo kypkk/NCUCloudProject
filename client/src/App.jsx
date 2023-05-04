@@ -1,7 +1,7 @@
 import "./Styles/App.css";
-import Nav from "./Components/Nav.js";
-import Home from "./Pages/Home.js";
-import Footer from "./Components/Footer.js";
+import Nav from "./Components/Nav.jsx";
+import Home from "./Pages/Home.jsx";
+import Footer from "./Components/Footer.jsx";
 import Shortenurl from "./Pages/Shortenurl";
 import Custom from "./Pages/Custom";
 import GenerateQrcode from "./Pages/GenerateQrcode";

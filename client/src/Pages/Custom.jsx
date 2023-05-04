@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "../Components/CustomForm.js";
+import Form from "../Components/CustomForm.jsx";
 
 const Custom = ({ url, seturl }) => {
   return (

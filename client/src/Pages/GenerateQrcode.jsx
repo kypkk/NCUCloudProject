@@ -1,5 +1,5 @@
 import React from "react";
-import QRForm from "../Components/QRForm.js";
+import QRForm from "../Components/QRForm.jsx";
 
 const GenerateQrcode = ({ url }) => {
   return (

@@ -85,7 +85,7 @@ export default function Nav() {
         >
           <span className=" font-bold text-xl text-blue-500">BEKADEI</span>
         </Typography>
-        <div className="hidden lg:block">{navList}</div>
+        <div className="hidden lg:flex flex-row">{navList}</div>
         <a href="/">
           <Button
             variant="gradient"
