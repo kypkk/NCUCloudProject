@@ -4,7 +4,6 @@ import bodyParser from "body-parser";
 import mysql from "mysql2";
 import cors from "cors";
 import dotenv from "dotenv";
-import e from "express";
 
 dotenv.config();
 const app = express();
