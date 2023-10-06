@@ -35,7 +35,7 @@ const QRform = ({ url }) => {
           一鍵生成
         </button>
       </form>
-      {qrcode && (
+      {qrcode? (
         <div className="w-full flex-col justify-center align-center">
           <div className="w-full flex justify-center align-center my-4">
             <img src={qrcode} className=" h-48 w-48 " />
@@ -50,7 +50,7 @@ const QRform = ({ url }) => {
             </a>
           </div>
         </div>
-      )}
+      ): null}
     </div>
   );
 };
