@@ -4,8 +4,8 @@ import "../Styles/Home.css";
 
 const Home = () => {
   return (
-    <div className="flex align-center justify-start  m-4">
-      <section className="lg:mx-24 mx-5 ">
+    <div className="flex align-center justify-start mx-auto ">
+      <section className="mx-8 2xl:mx-0 xl:pr-20">
         <div className=" my-10  md:invisible md:w-0">
           <img src={mainimage} />
         </div>
@@ -37,7 +37,7 @@ const Home = () => {
         </div>
       </section>
       <section>
-        <div className=" w-0 mt-48 invisible lg:visible lg:w-96">
+        <div className=" w-0 mt-48 invisible lg:visible lg:w-96 lg: ml-20">
           <img src={mainimage} />
         </div>
       </section>
