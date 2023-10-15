@@ -1,10 +1,10 @@
 import React from "react";
-import Form from "../Components/CustomForm.jsx";
+import CustomForm from "../Components/CustomForm.jsx";
 
 const Custom = ({ url, seturl }) => {
   return (
     <div>
-      <Form url={url} seturl={seturl} />
+      <CustomForm url={url} seturl={seturl} />
     </div>
   );
 };
