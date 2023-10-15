@@ -3,6 +3,9 @@ pipeline {
     environment {
 	REACT_APP_CLIENT = credentials('REACT_APP_CLIENT')
     }
+    tools {
+        nodejs 'Node_SoftwareEngineeringPractice'
+    }
     stages {
         stage('Checkout') {
 			steps {
