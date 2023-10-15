@@ -1,10 +1,22 @@
 pipeline {
     agent any
+    environment {
+	REACT_APP_CLIENT = credentials('REACT_APP_CLIENT')
+    }
     stages {
         stage('Checkout') {
 			steps {
 				checkout scm
 			}
 		}
+        stage('Client Tests') {
+            steps {
+                dir('client') {
+                    sh 'npm install'
+                    sh 'export REACT_APP_CLIENT="$REACT_APP_CLIENT"'
+                    sh 'npm test'
+                }
+            }
+        }
     }
 }
