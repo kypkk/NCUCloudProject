@@ -18,7 +18,6 @@ pipeline {
                     sh 'npm install'
                     sh 'export REACT_APP_CLIENT="$REACT_APP_CLIENT"'
                     sh 'echo test success'
-                    sj 'exit 0'
                 }
             }
         }
