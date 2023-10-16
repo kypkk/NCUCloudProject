@@ -2,6 +2,13 @@ pipeline {
     agent any
     environment {
 	REACT_APP_CLIENT = credentials('REACT_APP_CLIENT')
+    REACT_APP_SERVER =  credentials('REACT_APP_SERVER')
+    DB_HOST = credentials('DB_HOST')
+    DB_USER = credentials('DB_USER')
+    DB_PASSWORD = credentials('DB_PASSWORD')
+    DB_DATABASE = credentials('DB_DATABASE')
+    DB_PORT = credentials('DB_PORT')
+    SERVER_PORT = credentials('SERVER_PORT')
     }
     tools {
         nodejs 'Node_SoftwareEngineeringPractice'
@@ -17,7 +24,8 @@ pipeline {
                 dir('client') {
                     sh 'npm install'
                     sh 'export REACT_APP_CLIENT="$REACT_APP_CLIENT"'
-                    sh 'echo test success'
+                    sh 'export REACT_APP_SERVER="$REACT_APP_SERVER"'
+                    sh 'npm run build'
                 }
             }
         }
