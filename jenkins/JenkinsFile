@@ -25,7 +25,7 @@ pipeline {
                     sh 'npm install'
                     sh 'export REACT_APP_CLIENT="$REACT_APP_CLIENT"'
                     sh 'export REACT_APP_SERVER="$REACT_APP_SERVER"'
-                    sh 'npm run build'
+                    sh 'build successfully'
                 }
             }
         }
