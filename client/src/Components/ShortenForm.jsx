@@ -37,7 +37,7 @@ const Shortenform = ({ url, seturl }) => {
       </form>
       <div className="flex justify-center align-center">
         <h3 className=" w-72 mx-5">{url}</h3>
-        <h1 className="w-12 mx-5"></h1>
+        <p className="w-12 mx-5"></p>
       </div>
     </div>
   );

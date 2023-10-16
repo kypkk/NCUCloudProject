@@ -13,7 +13,7 @@ const Customform = ({ url, seturl }) => {
         Keyword: keywordRef.current.value.toString(),
       })
       .then((response) => {
-        if (response.data.ERR == "這個關鍵字已被使用，請換一個關鍵字") {
+        if (response.data.ERR === "這個關鍵字已被使用，請換一個關鍵字") {
           seturl(response.data.ERR);
         } else {
           seturl(process.env.REACT_APP_CLIENT + response.data.URL);
@@ -55,7 +55,7 @@ const Customform = ({ url, seturl }) => {
       </form>
       <div className="flex justify-center align-center">
         <h3 className=" w-48 mx-5">{url}</h3>
-        <h1 className="w-12 mx-5"></h1>
+        <p className="w-12 mx-5"></p>
       </div>
     </div>
   );
