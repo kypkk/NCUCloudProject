@@ -7,7 +7,7 @@ const Home = () => {
     <div className="flex align-center justify-start mx-auto ">
       <section className="mx-8 2xl:mx-0 xl:pr-20">
         <div className=" my-10  md:invisible md:w-0">
-          <img src={mainimage} alt="" />
+          <img src={mainimage} alt="Image Medium" />
         </div>
         <h1 className=" text-5xl md:mt-72 text-blue-500 mb-4 font-bold">
           BEKADEI
@@ -38,7 +38,7 @@ const Home = () => {
       </section>
       <section>
         <div className=" w-0 mt-48 invisible lg:visible lg:w-96 lg: ml-20">
-          <img src={mainimage} alt="" />
+          <img src={mainimage} alt="Image Large" />
         </div>
       </section>
     </div>
