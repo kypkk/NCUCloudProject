@@ -1,10 +1,14 @@
 module.exports = {
+  testMatch: [
+    "<rootDir>/src/**/__test__/*.test.js",
+    "<rootDir>/src/**/__test__/*.test.jsx",
+  ],
   transform: {
     "^.+\\.jsx?$": "babel-jest",
   },
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
-  testPathIgnorePatterns: ["(.*)index.js$", "/node_modules/", "/mocks/"],
+  testPathIgnorePatterns: ["node_modules/", "mocks/"],
   coveragePathIgnorePatterns: [
     "src/Images/",
     "(.*)index.js$",
