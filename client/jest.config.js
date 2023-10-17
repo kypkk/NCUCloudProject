@@ -8,12 +8,12 @@ module.exports = {
   },
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
-  testPathIgnorePatterns: ["node_modules/", "mocks/"],
+  testPathIgnorePatterns: ["<rootDir>/node_modules/", "<rootDir>/mocks/"],
   coveragePathIgnorePatterns: [
     "src/Images/",
     "(.*)index.js$",
-    "/node_modules/",
-    "/mocks/",
+    "<rootDir>/node_modules/",
+    "<rootDir>/mocks/",
   ],
   moduleNameMapper: {
     "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
