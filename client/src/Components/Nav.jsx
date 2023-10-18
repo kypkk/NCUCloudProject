@@ -45,6 +45,32 @@ export default function Nav() {
           關鍵字網址生成
         </a>
       </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal "
+      >
+        <a
+          href="/genqr"
+          className="flex items-center text-base hover:text-blue-700 hover:underline mx-2"
+        >
+          生成Qrcode
+        </a>
+      </Typography>
+      {/* <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <a
+          href="/about"
+          className="flex items-center text-base hover:text-blue-700 hover:underline mx-2"
+        >
+          關於我們
+        </a>
+      </Typography> */}
     </ul>
   );
 
