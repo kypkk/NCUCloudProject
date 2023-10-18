@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import axios from "axios";
+import IsValidUrl from "./IsValidUrl";
 
 const Customform = ({ url, seturl }) => {
   const urlRef = useRef();
@@ -7,18 +8,28 @@ const Customform = ({ url, seturl }) => {
 
   const CustomButton = async (e) => {
     e.preventDefault("");
-    await axios
-      .post(process.env.REACT_APP_SERVER + "/custom", {
-        URL: urlRef.current.value.toString(),
-        Keyword: keywordRef.current.value.toString(),
-      })
-      .then((response) => {
-        if (response.data.ERR === "這個關鍵字已被使用，請換一個關鍵字") {
-          seturl(response.data.ERR);
-        } else {
-          seturl(process.env.REACT_APP_CLIENT + response.data.URL);
-        }
-      });
+    if (
+      urlRef.current.value.toString().length > 0 &&
+      IsValidUrl(urlRef.current.value.toString()) &&
+      keywordRef.current.value.toString().length > 0
+    ) {
+      seturl("");
+      await axios
+        .post(process.env.REACT_APP_SERVER + "/custom", {
+          URL: urlRef.current.value.toString(),
+          Keyword: keywordRef.current.value.toString(),
+        })
+        .then((response) => {
+          if (response.data.ERR === "這個關鍵字已被使用，請換一個關鍵字") {
+            seturl(response.data.ERR);
+          } else {
+            seturl(process.env.REACT_APP_CLIENT + response.data.URL);
+          }
+        });
+    } else {
+      seturl("輸入不能為空，且必須是合法網址");
+    }
+
     urlRef.current.value = "";
     keywordRef.current.value = "";
   };

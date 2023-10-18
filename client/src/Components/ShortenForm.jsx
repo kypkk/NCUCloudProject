@@ -1,18 +1,29 @@
 import React, { useRef } from "react";
 import axios from "axios";
+import IsValidUrl from "./IsValidUrl";
 
 const Shortenform = ({ url, seturl }) => {
   const inputRef = useRef();
 
   const shortenbutton = async (e) => {
     e.preventDefault("");
-    await axios
-      .post(process.env.REACT_APP_SERVER + "/shorten", {
-        URL: inputRef.current.value.toString(),
-      })
-      .then((response) => {
-        seturl(process.env.REACT_APP_CLIENT + response.data.URL);
-      });
+
+    if (
+      inputRef.current.value.toString().length > 0 &&
+      IsValidUrl(inputRef.current.value.toString())
+    ) {
+      seturl("");
+      await axios
+        .post(process.env.REACT_APP_SERVER + "/shorten", {
+          URL: inputRef.current.value.toString(),
+        })
+        .then((response) => {
+          seturl(process.env.REACT_APP_CLIENT + response.data.URL);
+        });
+    } else {
+      seturl("輸入不能為空，且必須是合法網址");
+    }
+
     inputRef.current.value = "";
   };
 
