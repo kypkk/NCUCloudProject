@@ -24,13 +24,13 @@ const Home = () => {
         <div className="mt-2">
           <button
             type="submit"
-            className="my-4 mr-4 px-4 py-2 font-bold bg-blue-500 rounded-lg text-white w-30 h-10"
+            className="my-4 mr-4 px-4 py-2 font-bold bg-blue-500 rounded-lg text-white w-30 h-10 btn-primary-shorten"
           >
             <a href="/shorten">縮短網址</a>
           </button>
           <button
             type="submit"
-            className="my-4 mr-4 px-4 py-2 font-bold bg-blue-500 rounded-lg text-white w-30 h-10"
+            className="my-4 mr-4 px-4 py-2 font-bold bg-blue-500 rounded-lg text-white w-30 h-10 btn-primary-genqr"
           >
             <a href="/genqr">QrCode</a>
           </button>

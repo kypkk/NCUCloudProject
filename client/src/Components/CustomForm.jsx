@@ -41,7 +41,7 @@ const Customform = ({ url, seturl }) => {
           <input
             type="text"
             name=""
-            id=""
+            id="input-shortenURL"
             placeholder="Type in a url😁"
             className="py-2 w-72 p-2 border-collapse border border-blue-300 rounded-xl text-black m-4"
             ref={urlRef}
@@ -49,7 +49,7 @@ const Customform = ({ url, seturl }) => {
           <input
             type="text"
             name=""
-            id=""
+            id="keyword"
             placeholder="Custom url Keyword"
             className="py-2 w-72 p-2 border-collapse border border-blue-300 rounded-xl text-black m-4"
             ref={keywordRef}
@@ -57,7 +57,7 @@ const Customform = ({ url, seturl }) => {
 
           <button
             type="submit"
-            className="m-4 px-4 py-2 font-bold bg-blue-500 rounded-xl text-white w-28 h-10"
+            className="m-4 px-4 py-2 font-bold bg-blue-500 rounded-xl text-white w-28 h-10 submit"
             onClick={CustomButton}
           >
             產生網址
@@ -65,7 +65,7 @@ const Customform = ({ url, seturl }) => {
         </div>
       </form>
       <div className="flex justify-center align-center">
-        <h3 className=" w-48 mx-5">{url}</h3>
+        <h3 className=" w-48 mx-5 shortenUrl">{url}</h3>
         <p className="w-12 mx-5"></p>
       </div>
     </div>

@@ -33,7 +33,7 @@ const Shortenform = ({ url, seturl }) => {
         <input
           type="text"
           name=""
-          id=""
+          id="input-shortenURL"
           placeholder="Type in a url😁"
           className="py-2 w-72 p-2 border-collapse border border-blue-300 rounded-xl text-black m-4"
           ref={inputRef}
@@ -41,13 +41,13 @@ const Shortenform = ({ url, seturl }) => {
         <button
           onClick={shortenbutton}
           type="submit"
-          className="m-4 px-4 py-2 font-bold bg-blue-500 rounded-xl text-white lg:w-28 sm:w-20"
+          className="m-4 px-4 py-2 font-bold bg-blue-500 rounded-xl text-white lg:w-28 sm:w-20 submit"
         >
           一鍵縮短
         </button>
       </form>
       <div className="flex justify-center align-center">
-        <h3 className=" w-72 mx-5">{url}</h3>
+        <h3 className=" w-72 mx-5 shortenUrl">{url}</h3>
         <p className="w-12 mx-5"></p>
       </div>
     </div>
