@@ -27,7 +27,7 @@ export default function Nav() {
       >
         <a
           href="/shorten"
-          className="flex items-center text-base hover:text-blue-700 hover:underline mx-2"
+          className="flex items-center text-base hover:text-blue-700 hover:underline mx-2 btn-nav-shorten"
         >
           縮短網址
         </a>
@@ -40,7 +40,7 @@ export default function Nav() {
       >
         <a
           href="/custom"
-          className="flex items-center text-base hover:text-blue-700 hover:underline mx-2"
+          className="flex items-center text-base hover:text-blue-700 hover:underline mx-2 btn-nav-custom"
         >
           關鍵字網址生成
         </a>
@@ -53,7 +53,7 @@ export default function Nav() {
       >
         <a
           href="/genqr"
-          className="flex items-center text-base hover:text-blue-700 hover:underline mx-2"
+          className="flex items-center text-base hover:text-blue-700 hover:underline mx-2 btn-nav-genqr"
         >
           生成Qrcode
         </a>
@@ -81,7 +81,7 @@ export default function Nav() {
           as="a"
           href="/"
           variant="small"
-          className="mr-4 cursor-pointer py-1.5 font-normal"
+          className="mr-4 cursor-pointer py-1.5 font-normal btn-nav-home"
         >
           <span className=" font-bold text-xl text-blue-500">BEKADEI</span>
         </Typography>
@@ -90,7 +90,7 @@ export default function Nav() {
           <Button
             variant="gradient"
             size="sm"
-            className="hidden lg:inline-block "
+            className="hidden lg:inline-block btn-nav-whatsup"
           >
             <span>What's up</span>
             <a href="/"></a>
