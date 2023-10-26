@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "watch": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx jest"
   },
   "author": "kypkk",
   "license": "ISC",
