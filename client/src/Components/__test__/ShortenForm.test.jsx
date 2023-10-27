@@ -67,7 +67,7 @@ describe("ShortenForm Test", () => {
    * 
    * 此 test case 為非正確網址輸入
    */
-  test("ShortenForm 非合法網址輸入: 錯誤輸入", async () => {
+  test("ShortenForm 非合法網址輸入: 非正確網址輸入", async () => {
     // Arrange
     let url = "";
     const seturlMock = jest.fn((urlToBeSet) => {
