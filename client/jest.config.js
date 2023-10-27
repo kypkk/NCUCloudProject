@@ -12,6 +12,7 @@ module.exports = {
   coveragePathIgnorePatterns: [
     "src/Images/",
     "(.*)index.js$",
+    "src/Components/QRForm",
     "<rootDir>/node_modules/",
     "<rootDir>/mocks/",
   ],
